@@ -246,6 +246,36 @@
     }
   }
 
+  .demande-aide {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    position: absolute;
+    top: -2.5rem;
+    right: 1.75rem;
+    border-radius: .5rem;
+    color: #fff;
+    background-color: $eva_dark;
+    .aide {
+      &-icone {
+        margin-right: 1rem;
+      }
+      &-description {
+        margin-right: 3.5rem;
+        p {
+          margin-bottom: 0;
+        }
+      }
+      &-cta {
+        .action {
+          @include bouton;
+          padding: 0.3rem 0.8rem;
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
+
   .stanine-niveau-francais-mathematique {
     color: $eva_main_blue
   }

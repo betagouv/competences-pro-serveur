@@ -1,6 +1,21 @@
 # frozen_string_literal: true
 
 div id: 'francais_mathematiques', class: 'marges-page' do
+
+  unless pdf
+    div class: 'demande-aide' do
+      div class: 'aide-icone' do
+        text_node image_tag 'demande_aide.png'
+      end
+      div class: 'aide-description' do
+        md 'Besoin d\'aide pour trouver une formation (ou une <br> solution d\'accompagnement) adaptée ?'
+      end
+      div class: 'aide-cta' do
+        text_node link_to 'Cliquez ici', '#', class: 'action'
+      end
+    end
+  end
+
   render 'litteratie_numeratie_synthese',
          synthese: restitution_globale.synthese,
          pdf: pdf
